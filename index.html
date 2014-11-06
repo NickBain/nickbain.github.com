@@ -1,61 +1,30 @@
 ---
 layout: default
 ---
-<section id="sub_title">
-	<div class="slideshow">
-		
-		
-		<input id="contact-radio" type="radio" name="radio-set" class="slide_radio"/>		
-		<label for="contact-radio" id="contact_label" class="slide_label"></label>
-		
-		<input id="about-radio" type="radio" name="radio-set"checked="checked" class="slide_radio"/>
-		<label for="about-radio" id="about_label" class="slide_label"></label>		
-		
-		<input id="folio-radio" type="radio" name="radio-set" class="slide_radio"/>
-		<label for="folio-radio" id="folio_label" class="slide_label"></label>	
-					
-		<div class="slides">
-			<span class="slide" id="contact">	
-				<div class="inner">
-				<label for="contact-radio" class="slide_title section_title">Contact</label>
-				<label for="contact-radio">
+<div id="sidebar">
+							
+		<div class="sidebar-item" id="about">
+					<h2 class="section_title">About</h2>
+					<p>I'm <strong>Nick Bain</strong>.</p>
+			</div>
+			
+			<div class="sidebar-item" id="contact">	
 					<div class="icons">
 						<a href="https://github.com/NickBain" target="_blank" title="github"><i class="icon-github"></i></a>
 						<a href="https://twitter.com/nicky_bain" target="_blank" title="twitter"><i class="icon-twitter-sign"></i></a>
 						<a href="/contact" title="email"><i class="icon-envelope-alt"></i></a>
 					</div>
-				</label>
-				</div>
-			</span>
-					
-			<span class="slide" id="about">
-				<label for="about-radio">
-				<div class="inner">
-					<span class="slide_title section_title">About</span>
-					<p>I'm <strong>Nick Bain</strong>.</p>
-				</div>
-				</label>
-			</span>
-			
-			<span class="slide" id="folio">
-				<label for="folio-radio">
-				<div class="inner">
-				<span class="slide_title section_title">Work</span>
-				<p>Eiusmod bespoke semiotics dreamcatcher proident, vero artisan cillum. Etsy bespoke you probably haven't heard of them, photo booth aesthetic sapiente terry richardson skateboard placeat lo-fi twee. Nisi farm-to-table irure laborum banjo.</p>		
-				</div>
-				</label>
-			</span>
-		</ul>
-
-	</div>
-</section> 
+			</div>
+		
+</div>
 
 
 
-<section class="content">
-		<h1 class="section_title"><a href="/posts">Posts</a></h1>
+<div class="content home-content">
+	<section>
+	<h2 class="section_title"><a href="/posts">Posts</a></h2>
   	{% for post in paginator.posts %}
-		<div class="post">
+		<article class="post">
 		<a href="{{ post.url }}" title="{{ post.title }}">
 		<h2 class="post_heading">{{ post.title }}</h2>
 		</a>
@@ -76,13 +45,13 @@ layout: default
 		   {% endif %}
 		</div>
 		{% endif %}
-		</div>
+		</article>
 	{% endfor %}
-</section>
+	</section>
 
-<!-- Pagination links -->
+	<!-- Pagination links -->
 <div id="post-pagination" class="pagination">
-
+{% if paginator.total_pages > 1%}
   {% if paginator.previous_page %}
   <p class="previous">
     {% if paginator.previous_page == 1 %}
@@ -126,5 +95,8 @@ layout: default
     <span>Next</span>
   </p>
   {% endif %}
+{% endif %}
+</div>
 
 </div>
+
