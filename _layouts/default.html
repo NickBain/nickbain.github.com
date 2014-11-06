@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8 />
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+
+  <title> {% if page.title %} {{ page.title }} | {% endif %} Nick Bain</title>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:600,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+
+  <!--[if lt IE 9]>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+ 
+  <div id="main">
+ 
+    <header id="header">
+		<span id="logo_text"><a href="/">Nick<span class="logo_alt">Bain</span></a></span>
+    
+ 	<nav role="navigation" id="navigation">
+	      <ul>
+	        <li><a href="/">Home</a></li>
+	        <li><a href="/posts/">Posts</a></li>
+	        <li><a href="/work">Work</a></li>
+	        <li><a href="/contact">Contact</a></li>
+	      </ul>
+	</nav>
+	</header>
+    {{ content }}
+ 
+    <footer id="footer">
+		&copy Nicholas Bain 2013
+    </footer>
+ 
+  </div>
+</body>
+</html>

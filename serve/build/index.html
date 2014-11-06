@@ -1,7 +1,34 @@
----
-layout: default
----
-<section id="sub_title">
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8 />
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+
+  <title>  Nick Bain</title>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:600,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+
+  <!--[if lt IE 9]>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+ 
+  <div id="main">
+ 
+    <header id="header">
+		<span id="logo_text"><a href="/">Nick<span class="logo_alt">Bain</span></a></span>
+    
+ 	<nav role="navigation" id="navigation">
+	      <ul>
+	        <li><a href="/">Home</a></li>
+	        <li><a href="/posts/">Posts</a></li>
+	        <li><a href="/work">Work</a></li>
+	        <li><a href="/contact">Contact</a></li>
+	      </ul>
+	</nav>
+	</header>
+    <section id="sub_title">
 	<div class="slideshow">
 		
 		
@@ -54,77 +81,59 @@ layout: default
 
 <section class="content">
 		<h1 class="section_title"><a href="/posts">Posts</a></h1>
-  	{% for post in paginator.posts %}
+  	
 		<div class="post">
-		<a href="{{ post.url }}" title="{{ post.title }}">
-		<h2 class="post_heading">{{ post.title }}</h2>
+		<a href="/2013/hello/" title="Hello World">
+		<h2 class="post_heading">Hello World</h2>
 		</a>
 		
 		<ul class="postmeta">
-			<li>{{ post.date | date:"%d %B %Y" }}</li>
+			<li>09 March 2013</li>
 			<li>|</li>
-			<li>{{ post.category }} </li>
+			<li> </li>
 		</ul>
 		
-		{% if post.summary %}	
-		<p>{{ post.summary | strip_html | truncatewords: 150 }}</p>
-		{% else %}
+		
 		<div class="post_content">
-			<p>{{ post.content | split:'<!--break-->' | first }}</p>
-			{% if post.content contains '<!--break-->' %}
-		      <a class="read_more" href="{{ post.url }}">..Read more</a>
-		   {% endif %}
+			<p><p>Hello world! <a href='http://example.com/' title='Title'>an example</a></p></p>
+			
 		</div>
-		{% endif %}
+		
 		</div>
-	{% endfor %}
+	
 </section>
 
 <!-- Pagination links -->
 <div id="post-pagination" class="pagination">
 
-  {% if paginator.previous_page %}
-  <p class="previous">
-    {% if paginator.previous_page == 1 %}
-    <a href="/">Previous</a>
-    {% else %}
-    <a href="/page{{paginator.previous_page}}">Previous</a>
-    {% endif %}
-  </p>
-  {% else %}
+  
   <p class="previous disabled">
     <span>Previous</span>
   </p>
-  {% endif %}
+  
 
   <ul class="pages">
     <li class="page">
-      {% if paginator.page == 1 %}
+      
       <span class="current-page">1</span>
-      {% else %}
-      <a href="/">1</a>
-      {% endif %}
+      
     </li>
 
-    {% for count in (2..paginator.total_pages) %}
-    <li class="page">
-      {% if count == paginator.page %}
-      <span class="current-page">{{count}}</span>
-      {% else %}
-      <a href="/page{{count}}">{{count}}</a>
-      {% endif %}
-    </li>
-    {% endfor %}
+    
   </ul>
 
-  {% if paginator.next_page %}
-  <p class="next">
-    <a href="/page{{paginator.next_page}}">Next</a>
-  </p>
-  {% else %}
+  
   <p class="next disabled">
     <span>Next</span>
   </p>
-  {% endif %}
+  
 
 </div>
+ 
+    <footer id="footer">
+		&copy Nicholas Bain 2013
+    </footer>
+ 
+  </div>
+</body>
+</html>

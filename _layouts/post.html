@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<section class="content">
+
+<h1 class="section_title">Post</h1>
+
+<article class="post">
+	<span class="post_heading">{{ page.title }}</span>
+	
+	<ul class="postmeta">
+		<li>{{ page.date | date:"%d %B %Y" }}</li>
+		<li>|</li>
+		<li>{{ page.category }} </li>
+	</ul>
+	
+	<div class="post_content">{{ content }}</div>
+</article>
+</section>

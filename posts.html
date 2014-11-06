@@ -1,0 +1,39 @@
+---
+layout: default
+permalink: /posts/index.html
+paginate: 7
+title: Posts
+---
+
+
+
+<section class="content">
+		<h1 class="section_title"><a href="/posts">Posts</a></h1>
+  	{% for post in site.posts %}
+		<div class="post">
+		<a href="{{ post.url }}" title="{{ post.title }}">
+		<h2 class="post_heading">{{ post.title }}</h2>
+		</a>
+		
+		<ul class="postmeta">
+			<li>{{ post.date | date:"%d %B %Y" }}</li>
+			<li>|</li>
+			<li>{{ post.category }} </li>
+		</ul>
+		
+		{% if post.summary %}	
+		<p>{{ post.summary | strip_html | truncatewords: 150 }}</p>
+		{% else %}
+		<div class="post_content">
+			<p>{{ post.content | split:'<!--break-->' | first }}</p>
+			{% if post.content contains '<!--break-->' %}
+		      <a class="read_more" href="{{ post.url }}">..Read more</a>
+		   {% endif %}
+		</div>
+		{% endif %}
+		</div>
+	{% endfor %}
+</section>
+
+
+</div>
