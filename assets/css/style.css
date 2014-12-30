@@ -61,7 +61,7 @@ body{
 width: 20%;
 float: left;
 margin-right: 1em;
-padding-top: 1.5em;
+padding-top: 1em;
 }
 
 #main{
@@ -102,9 +102,12 @@ padding-top: 1.5em;
 	margin:0 auto;
 	overflow:hidden;
 }
-
+h1{
+	margin:.4em 0;
+}
 h2{
 	font-weight: 200;
+	color: #BF4B31;
 }
 
 #navigation{
@@ -113,6 +116,7 @@ h2{
 }
 #navigation ul{
 	float:right;
+	padding: 0;
 }
 #navigation li{
 	list-style-type: none;
@@ -121,7 +125,7 @@ h2{
 	-webkit-transition: border 0.2s ease-in-out; 
 	-moz-transition: border 0.2s ease-in-out;
 	-o-transition: border 0.2s ease-in-out;
-	margin-left:1.5em;
+	margin-right:1.5em;
 	padding-bottom:0.25em;
 	border-bottom: 1px solid #fff;
 	
@@ -155,7 +159,7 @@ section{
 }
 .content{
 	width:100%;
-	padding-top:1.5em;
+	padding-top:1em;
 }
 
 .home-content{
@@ -173,13 +177,22 @@ section{
 	
 }
 
-.post_content a{
+.post a{
 	/* color:#43BBDD; */
-	color:#BF4B31; 
+	/* color:#BF4B31; */
+	border-bottom: 1px solid #D3D3D3;
 }
 
-.post_content a:hover{
-	text-decoration:underline;
+.post a:hover{
+	color:#BF4B31;
+}
+
+.contact-item{
+	margin: 0.5em 0;
+	padding: 0.25em 0;
+}
+.contact-item a:hover{
+	border-bottom: 1px solid #D3D3D3;
 }
 
 .post_heading{
@@ -208,9 +221,14 @@ section{
 		
 }
 
-a.read_more{
-	color:#333;
+.no-bullet{
+ 	margin: 0em;
+    padding: 0em;
+    list-style: none;
+    list-style-type: none;
 }
+
+
 .slideshow{
 	width:100%;
 	overflow: hidden;
@@ -255,6 +273,7 @@ a.read_more{
 	text-transform:lowercase;
 	border-bottom: 1px solid #D3D3D3;
 	padding-bottom: 0.25em;
+	color: #333;
 }
 
 
@@ -321,12 +340,12 @@ a.read_more{
 }
 
 .icons i{
-	padding:0 1em;
+	padding:0 0.5em;
 	-moz-transition:color 0.2s;
     -webkit-transition:color 0.2s;
     -o-transition:color 0.2s;
     transition:color 0.2s;
-    width: 100%;
+   
 }
 .icons{
 	font-size:2.5em;
@@ -423,11 +442,31 @@ a.read_more{
 	font-size:0.75em;
 }
 
-@media only screen   
-and (max-width : 320px) {  
-.slideshow{
-	-webkit-overflow-scrolling: touch;	
-}
+
+
+@media only screen and (max-width: 40em) { 
+
+	#sidebar{
+		width: 100%;	
+	}
+
+	#navigation{
+		width: 100%;
+		display: block;
+		float:left;
+		text-align:left;
+	}
+
+	#navigation ul{
+		float: left;
+	}
+
+	.content{
+		width: 100%;
+		display: block;
+	}
+} 
+
 .slides{
 	width:300%;
 	transform:translate3d(-33.33%,0,0);
@@ -463,6 +502,94 @@ and (max-width : 320px) {
 }
 
 
+.highlight .hll { background-color: #ffffcc }
+.highlight .c { color: #aaaaaa; font-style: italic } /* Comment */
+.highlight .err { color: #F00000; background-color: #F0A0A0 } /* Error */
+.highlight .k { color: #0000aa } /* Keyword */
+.highlight .cm { color: #aaaaaa; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #4c8317 } /* Comment.Preproc */
+.highlight .c1 { color: #aaaaaa; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #0000aa; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #aa0000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #aa0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00aa00 } /* Generic.Inserted */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #555555 } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #aa0000 } /* Generic.Traceback */
+.highlight .kc { color: #0000aa } /* Keyword.Constant */
+.highlight .kd { color: #0000aa } /* Keyword.Declaration */
+.highlight .kn { color: #0000aa } /* Keyword.Namespace */
+.highlight .kp { color: #0000aa } /* Keyword.Pseudo */
+.highlight .kr { color: #0000aa } /* Keyword.Reserved */
+.highlight .kt { color: #00aaaa } /* Keyword.Type */
+.highlight .m { color: #009999 } /* Literal.Number */
+.highlight .s { color: #aa5500 } /* Literal.String */
+.highlight .na { color: #1e90ff } /* Name.Attribute */
+.highlight .nb { color: #00aaaa } /* Name.Builtin */
+.highlight .nc { color: #00aa00; text-decoration: underline } /* Name.Class */
+.highlight .no { color: #aa0000 } /* Name.Constant */
+.highlight .nd { color: #888888 } /* Name.Decorator */
+.highlight .ni { color: #800000; font-weight: bold } /* Name.Entity */
+.highlight .nf { color: #00aa00 } /* Name.Function */
+.highlight .nn { color: #00aaaa; text-decoration: underline } /* Name.Namespace */
+.highlight .nt { color: #1e90ff; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #aa0000 } /* Name.Variable */
+.highlight .ow { color: #0000aa } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mf { color: #009999 } /* Literal.Number.Float */
+.highlight .mh { color: #009999 } /* Literal.Number.Hex */
+.highlight .mi { color: #009999 } /* Literal.Number.Integer */
+.highlight .mo { color: #009999 } /* Literal.Number.Oct */
+.highlight .sb { color: #aa5500 } /* Literal.String.Backtick */
+.highlight .sc { color: #aa5500 } /* Literal.String.Char */
+.highlight .sd { color: #aa5500 } /* Literal.String.Doc */
+.highlight .s2 { color: #aa5500 } /* Literal.String.Double */
+.highlight .se { color: #aa5500 } /* Literal.String.Escape */
+.highlight .sh { color: #aa5500 } /* Literal.String.Heredoc */
+.highlight .si { color: #aa5500 } /* Literal.String.Interpol */
+.highlight .sx { color: #aa5500 } /* Literal.String.Other */
+.highlight .sr { color: #009999 } /* Literal.String.Regex */
+.highlight .s1 { color: #aa5500 } /* Literal.String.Single */
+.highlight .ss { color: #0000aa } /* Literal.String.Symbol */
+.highlight .bp { color: #00aaaa } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #aa0000 } /* Name.Variable.Class */
+.highlight .vg { color: #aa0000 } /* Name.Variable.Global */
+.highlight .vi { color: #aa0000 } /* Name.Variable.Instance */
+.highlight .il { color: #009999 } /* Literal.Number.Integer.Long */
+
+/* Make line numbers unselectable: excludes line numbers from copy-paste user ops */
+.highlight .lineno {-webkit-user-select: none;-moz-user-select: none; -o-user-select: none; color: #AAA;} 
+.lineno::-moz-selection {background-color: transparent;} /* Mozilla specific */
+.lineno::selection {background-color: transparent;} /* Other major browsers */
+
+.lineno { 
+  -moz-user-select: none; 
+  -webkit-user-select: none; 
+  -o-user-select: none; 
+  user-select: none; 
+} 
+
+
+.highlighttable {
+  width: 100%;
+  padding: 0 60px 0 36px !important;
+  background: #eee;
+  color: #586e75;
+}
+
+.highlighttable .linenos {
+  width: 34px;
+  color: #aaa;
+  padding-left: 6px;
+}
+
+.highlighttable pre {
+  line-height: 1.3em;
+}
 /*!
  *  Font Awesome 3.0.2
  *  the iconic font designed for use with Twitter Bootstrap

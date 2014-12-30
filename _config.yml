@@ -1,6 +1,5 @@
-auto:        true
-permalink: /:year/:title/
+permalink: /blog/:year/:title/
 paginate: 5
-
+markdown: kramdown
 
 

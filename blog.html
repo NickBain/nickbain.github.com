@@ -1,24 +1,26 @@
 ---
 layout: default
-permalink: /posts/index.html
+permalink: /blog/index.html
 paginate: 7
-title: Posts
+title: Blog
 ---
 
 
 
 <section class="content">
-		<h1 class="section_title"><a href="/posts">Posts</a></h1>
+		<h2 class="section_title"><a href="/blog">blog</a></h2>
   	{% for post in site.posts %}
 		<div class="post">
 		<a href="{{ post.url }}" title="{{ post.title }}">
-		<h2 class="post_heading">{{ post.title }}</h2>
+		<h1 class="post_heading">{{ post.title }}</h1>
 		</a>
 		
 		<ul class="postmeta">
 			<li>{{ post.date | date:"%d %B %Y" }}</li>
 			<li>|</li>
 			<li>{{ post.category }} </li>
+			<li>|</li>
+			<li> <a href="{{ post.url }}#disqus_thread">Comments</a> </li>
 		</ul>
 		
 		{% if post.summary %}	

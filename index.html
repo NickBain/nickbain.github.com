@@ -6,15 +6,19 @@ layout: default
 		<div class="sidebar-item" id="about">
 					<h2 class="section_title">About</h2>
 					<p>I'm <strong>Nick Bain</strong>.</p>
+					<p>A developer, JavaScript enthusiast and technology fiend.</p>
+
+					<ul class="sidebar-item no-bullet">	
+					
+						<li class="contact-item"><a href="https://github.com/NickBain" target="_blank" title="github">/github</a></li>
+						<li class="contact-item"><a href="https://twitter.com/nicky_bain" target="_blank" title="twitter_link">/twitter</a></li>
+						<li class="contact-item"><a href="/contact" title="email">/email</a></li>
+					
+					</ul>
+
 			</div>
 			
-			<div class="sidebar-item" id="contact">	
-					<div class="icons">
-						<a href="https://github.com/NickBain" target="_blank" title="github"><i class="icon-github"></i></a>
-						<a href="https://twitter.com/nicky_bain" target="_blank" title="twitter"><i class="icon-twitter-sign"></i></a>
-						<a href="/contact" title="email"><i class="icon-envelope-alt"></i></a>
-					</div>
-			</div>
+			
 		
 </div>
 
@@ -22,17 +26,19 @@ layout: default
 
 <div class="content home-content">
 	<section>
-	<h2 class="section_title"><a href="/posts">Posts</a></h2>
+	<h2 class="section_title"><a href="/blog">Blog</a></h2>
   	{% for post in paginator.posts %}
 		<article class="post">
 		<a href="{{ post.url }}" title="{{ post.title }}">
-		<h2 class="post_heading">{{ post.title }}</h2>
+		<h1 class="post_heading">{{ post.title }}</h1>
 		</a>
 		
 		<ul class="postmeta">
 			<li>{{ post.date | date:"%d %B %Y" }}</li>
 			<li>|</li>
 			<li>{{ post.category }} </li>
+			<li>|</li>
+			<li><a href="{{ post.url }}#disqus_thread" class="disqus-comment-count" data-disqus-identifier="1">comments</a></li>
 		</ul>
 		
 		{% if post.summary %}	
@@ -99,4 +105,18 @@ layout: default
 </div>
 
 </div>
+
+<script type="text/javascript">
+/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+var disqus_shortname = 'nbain'; // required: replace example with your forum shortname
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function () {
+var s = document.createElement('script'); s.async = true;
+s.type = 'text/javascript';
+s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+
 
