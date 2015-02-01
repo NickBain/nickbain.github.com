@@ -8,7 +8,7 @@ a:active,a:hover{outline:0}
 h1{font-size:2em;margin:.67em 0}
 h2{font-size:1.5em;margin:0}
 abbr[title]{border-bottom:1px dotted}
-b,strong{font-weight:700}
+b,strong{font-weight:600}
 dfn{font-style:italic}
 hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}
 mark{background:#ff0;color:#000}
@@ -54,6 +54,7 @@ body{
 	color:#333;
 	background-color: #fff;
 	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
 	height:100%;
 }
 #sidebar{
@@ -174,7 +175,11 @@ section{
 .post{
 	clear:both;
 	padding-bottom:1.5em;
-	
+	border-bottom: 1px solid #eee;
+}
+
+.post:last-child{
+	border-bottom: none;
 }
 
 .post a{
@@ -197,7 +202,7 @@ section{
 
 .post_heading{
 	font-size:2em;
-	font-weight:200;
+	font-weight:300;
 }
 
 .postmeta {
@@ -269,9 +274,9 @@ section{
 
 .section_title{
 	font-size:1.5em;
-	font-weight: 600;
+	font-weight: 400;
 	text-transform:lowercase;
-	border-bottom: 1px solid #D3D3D3;
+	border-bottom: 1px solid #eee;
 	padding-bottom: 0.25em;
 	color: #333;
 }
