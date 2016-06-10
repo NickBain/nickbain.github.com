@@ -26,34 +26,10 @@ layout: default
 
 <div class="content home-content">
 	<section>
-	<h2 class="section_title"><a href="/blog">Blog</a></h2>
-  	{% for post in paginator.posts %}
-		<article class="post">
-		<a href="{{ post.url }}" title="{{ post.title }}">
-		<h1 class="post_heading">{{ post.title }}</h1>
-		</a>
-		
-		<ul class="postmeta">
-			<li>{{ post.date | date:"%d %B %Y" }}</li>
-			<li>|</li>
-			<li>{{ post.category }} </li>
-			<li>|</li>
-			<li><a href="{{ post.url }}#disqus_thread" class="disqus-comment-count" data-disqus-identifier="1">comments</a></li>
-		</ul>
-		
-		{% if post.summary %}	
-		<p>{{ post.summary | strip_html | truncatewords: 150 }}</p>
-		{% else %}
-		<div class="post_content">
-			<p>{{ post.content | split:'<!--break-->' | first }}</p>
-			{% if post.content contains '<!--break-->' %}
-		      <a class="read_more" href="{{ post.url }}">..Read more</a>
-		   {% endif %}
-		</div>
-		{% endif %}
-		</article>
-	{% endfor %}
+	<h2 class="section_title">Projects</h2>
+  		<a href="https://www.logrequest.com">logrequest</a> - a free tool to debug HTTP request. Great for testing webhooks
 	</section>
+	
 
 	<!-- Pagination links -->
 <div id="post-pagination" class="pagination">
